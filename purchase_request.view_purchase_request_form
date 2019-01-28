@@ -127,11 +127,10 @@
                                                        domain="[('type','not in',('view','template'))]" 
                                                        attrs="{
                                                               'readonly': [('is_editable','=', False)],
-                                                              'required':[('division','=',True)]
+                                                              'required': [('date_required','=', True)]
                                                               }"/>
-                                              
-                                              
-                                              attrs="{}"
+                                       
+                                            
                                               
                                                 <field name="date_required"  
                                                        attrs="{'readonly': [('is_editable','=', False)]}"/>
