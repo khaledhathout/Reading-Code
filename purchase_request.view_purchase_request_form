@@ -82,9 +82,12 @@
                     <label for="description"/>
                     <field name="description" 
                            attrs="{'readonly': [('is_editable','=', False)]}"/>
+                  
                     <notebook>
                         <page string="Products">
+                          
                             <field name="line_ids">
+                              
                                 <tree>
                                     <field name="product_id"/>
                                     <field name="name"/>
@@ -94,30 +97,51 @@
                                     <field name="date_required"/>
                                     <field name="is_editable" invisible="1"/>
                                 </tree>
+                              
                                 <form>
                                     <sheet>
                                         <group>
+                                          
                                             <group>
-                                                <field name="is_editable" invisible="1"/>
-                                                <field name="product_id" attrs="{'readonly': [('is_editable','=', False)]}"/>
-                                                <field name="name" attrs="{'readonly': [('is_editable','=', False)]}"/>
-                                                <label for="product_qty" attrs="{'readonly': [('is_editable','=', False)]}"/>
+                                                <field name="is_editable" 
+                                                       invisible="1"/>
+                                                <field name="product_id" 
+                                                       attrs="{'readonly': [('is_editable','=', False)]}"/>
+                                                <field name="name" 
+                                                       attrs="{'readonly': [('is_editable','=', False)]}"/>
+                                                <label for="product_qty" 
+                                                       attrs="{'readonly': [('is_editable','=', False)]}"/>
+                                              
                                                 <div>
-                                                    <field name="product_qty" class="oe_inline" attrs="{'readonly': [('is_editable','=', False)]}"/>
-                                                    <field name="product_uom_id" groups="product.group_uom" class="oe_inline" attrs="{'readonly': [('is_editable','=', False)]}"/>
+                                                    <field name="product_qty" 
+                                                           class="oe_inline" 
+                                                           attrs="{'readonly': [('is_editable','=', False)]}"/>
+                                                    <field name="product_uom_id" 
+                                                           groups="product.group_uom" 
+                                                           class="oe_inline" 
+                                                           attrs="{'readonly': [('is_editable','=', False)]}"/>
                                                 </div>
-                                                <field name="analytic_account_id" groups="analytic.group_analytic_accounting" domain="[('type','not in',('view','template'))]" attrs="{'readonly': [('is_editable','=', False)]}"/>
-                                                <field name="date_required" attrs="{'readonly': [('is_editable','=', False)]}"/>
+                                              
+                                                <field name="analytic_account_id" 
+                                                       groups="analytic.group_analytic_accounting" 
+                                                       domain="[('type','not in',('view','template'))]" 
+                                                       attrs="{'readonly': [('is_editable','=', False)]}"/>
+                                              
+                                                <field name="date_required"  
+                                                       attrs="{'readonly': [('is_editable','=', False)]}"/>
                                                 <field name="procurement_id"/>
                                             </group>
                                         </group>
                                         <group>
                                             <separator string="Specifications"/>
                                             <newline/>
-                                            <field name="specifications" nolabel="1" attrs="{'readonly': [('is_editable','=', False)]}"/>
+                                            <field name="specifications" nolabel="1" attrs="{'readonly': [('
+                                                                                            ','=', False)]}"/>
                                         </group>
                                         <notebook>
+                                          
                                         </notebook>
+                                      
                                     </sheet>
                                 </form>
                             </field>
