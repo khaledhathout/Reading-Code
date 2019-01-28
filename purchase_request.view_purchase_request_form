@@ -41,7 +41,7 @@
                                     <field name="product_uom_id" groups="product.group_uom"/>
                                     <field name="analytic_account_id" 
                                            groups="analytic.group_analytic_accounting" 
-                                           required="1"/>
+                                           />
                                                        
                                     <field name="date_required"/>
                                     <field name="is_editable" invisible="1"/>
@@ -61,6 +61,7 @@
                                                 <field name="analytic_account_id" 
                                                        groups="analytic.group_analytic_accounting" 
                                                        domain="[('type','not in',('view','template'))]" 
+                                                       required="1"
                                                        attrs="{'
                                                               readonly': [('is_editable','=', False)],
                                                               'required': [('date_required','=', True)]
