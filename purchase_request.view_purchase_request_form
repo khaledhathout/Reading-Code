@@ -3,11 +3,14 @@
   ############################################################
   ############################################################
                 <header>
+ #$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     <button name="button_draft" 
                             states="to_approve,approved,rejected" 
                             string="Reset" 
                             type="object" 
                             groups="purchase_request.group_purchase_request_manager"/>
+ #$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+                            
                     <button name="button_to_approve" states="draft" string="Request approval" type="object" class="oe_highlight"/>
                     <button name="button_approved" states="to_approve" string="Approve" type="object" class="oe_highlight" groups="purchase_request.group_purchase_request_manager"/>
                     <button name="button_rejected" states="to_approve,approved" string="Reject" type="object" groups="purchase_request.group_purchase_request_manager"/>
