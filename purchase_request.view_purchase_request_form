@@ -79,7 +79,7 @@
                       
                     </group>
                  
-                    <label for="description for Purchase Request as overview"/>
+                    <label for="description"/>
                     <field name="description" 
                            attrs="{'readonly': [('is_editable','=', False)]}"/>
                     <notebook>
