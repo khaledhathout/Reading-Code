@@ -28,8 +28,9 @@
 ##############################################################################          
  <field name="analytic_account_id" 
                                   groups="analytic.group_analytic_accounting" 
-                                  domain="[('type','not in',('view','template'))]" 
-                                  attrs="{'readonly': [('is_editable','=', False)]}"/>
+                                  domain="[('type','not in',('view','template'))]"
+                                  attrs="{'required':[('division','=',True)]}"
+                                  />
                                   
  <field name="date_required" 
                                   attrs="{'readonly': [('is_editable','=', False)]}"/>
