@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<form string="Purchase Request Line" version="7.0">
+                    <sheet>
+                        <h1>
+                            <field name="request_id"/>
+                            <field name="request_state"/>
+                        </h1>
+                        <group>
+                            <group>
+                                <group>
+                                    <field name="origin" attrs="{'readonly': [('is_editable','=', False)]}"/>
+                                    <field name="requested_by" attrs="{'readonly': [('is_editable','=', False)]}"/>
+                                    <field name="assigned_to" attrs="{'readonly': [('is_editable','=', False)]}"/>
+                                    <field name="description" attrs="{'readonly': [('is_editable','=', False)]}"/>
+                                    <field name="date_start" attrs="{'readonly': [('is_editable','=', False)]}"/>
+                                    <field name="company_id" groups="base.group_multi_company" widget="selection" attrs="{'readonly': [('is_editable','=', False)]}"/>
+                                    <field name="is_editable" invisible="1"/>
+                                </group>
+                            </group>
+                            <group>
+                                <field name="product_id" attrs="{'readonly': [('is_editable','=', False)]}"/>
+                                <field name="name" attrs="{'readonly': [('is_editable','=', False)]}"/>
+                                <label for="product_qty"/>
+                                <div>
+                                    <field name="product_qty" class="oe_inline" attrs="{'readonly': [('is_editable','=', False)]}"/>
+                                    <field name="product_uom_id" groups="product.group_uom" class="oe_inline" attrs="{'readonly': [('is_editable','=', False)]}"/>
+                                </div>
+##############################################################################          
+ <field name="analytic_account_id" 
+                                  groups="analytic.group_analytic_accounting" 
+                                  domain="[('type','not in',('view','template'))]" 
+                                  attrs="{'readonly': [('is_editable','=', False)]}"/>
+                                  
+ <field name="date_required" 
+                                  attrs="{'readonly': [('is_editable','=', False)]}"/>
+                                                      ##############################################################################          
+
+                                <field name="procurement_id"/>
+                            </group>
+                        </group>
+                        <group>
+                            <separator string="Specifications"/>
+                            <newline/>
+                            <field name="specifications" nolabel="1" attrs="{'readonly': [('is_editable','=', False)]}"/>
+                        </group>
+                        <notebook>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                      <field name="message_follower_ids" widget="mail_followers"/>
+                      <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            
